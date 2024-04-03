@@ -20,4 +20,10 @@ export class TodoListComponent {
     await this.todoService.addTodo(title);
     this.todos = this.todoService.todos;
   }
+
+  showCompleted: boolean = false
+
+  toggleShowCompleted() {
+    this.showCompleted = !this.showCompleted
+  }
 }
